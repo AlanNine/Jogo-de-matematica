@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathGame - Regras</title>
+    <link rel="stylesheet" href="css/estilo.css" id="estilo">
+    <link rel="stylesheet" href="css/regras.css" id="estiloRegras">
+</head>
+<body>
+    <header id="cabecalhoBackground"></header>
+    <header id="cabecalho">
+        <div id="niveis" class="cabecalhoButtons" onclick="menu()"><div>|||</div></div>
+        <h1 id="nomeSite"><a href="index.html"><span>M</span>ath<span>G</span>ame</a></h1>
+    </header>
+
+    <aside id="menu">
+        <div class="menuItem" id="mudarTema"><div id="temaWhite" class="tema" onclick="mudarTema('white')">White</div><div id="temaDark" class="tema" onclick="mudarTema('dark')">Dark</div></div>
+        <a href="regras.html"><div class="menuItem" id="regrasMenu"><h3>Regras</h3></div></a>
+    </aside>
+
+    <nav id="navbar">Home - Regras</nav>
+
+    <section id="corpo">
+        <h1 id="corpoTitulo">Regras</h1>
+        <div id="conteudo">
+            <h2>Escolhendo o modo de jogo!</h2>
+            <p>Primeiro você deve selecionar a dificuldade em que você deseja jogar. Para isso vá na <a href="index.html">página principal</a> e escolha a dificuldade desejada!</p>
+            <div class="exemplo" id="exemplo1">
+                <div class="selectDificuldadeEx" id="selDifFacilEx">
+                    <h1>Fácil</h1>
+                </div>
+                <div class="selectDificuldadeEx" id="selDifMedioEx">
+                    <h1>Médio</h1>
+                </div>
+                <div class="selectDificuldadeEx" id="selDifDificilEx">
+                    <h1>Difícil</h1>
+                </div><br>
+            </div>
+            <!--<a href="image/imgExemplo.png"><img src="image/imgExemplo.png" class="imgExemplo" id="imgExemplo"></a>-->
+            <h2>Trabalhando com soma</h2>
+            <p>Independente da dificuldade, sua única missão é somar dois números e clicar na opção que contenha o resultado correto.</p>
+            <p>Para iniciar, você deve clicar no botão <i>"Preparar, apontar..."</i>, em seguida no botão <i>"Fogo"</i></p>
+            <div class="exemplo" id="exemplo2">
+                <div id="container">
+                    <div id="first" class="ordem">1º - </div><div id="botaoIniciarEx">Preparar, apontar...</div><br>
+                    <div id="second" class="ordem">2º - </div><div id="Ex0">Fogo</div><br>
+                </div>
+            </div>
+            <!--<a href="image/imgExemplo2.png"><img src="image/imgExemplo2.png" class="imgExemplo" id="imgExemplo2"></a>-->
+            <p>Depois disso eles assumirão dois valores de números inteiros e algumas opções (dependendo da dificuldade escolhida) serão geradas. O que você deve fazer é escolher a opção que representa o resultado da soma dos dois números anteriores (na vertical).</p>
+            <div class="exemplo" id="exemplo3">
+                <div id="container">
+                    <div class="text" id="somaSinal">+{&nbsp;</div>
+                    <div id="botaoIniciarEx">10</div><br>
+                    <div id="Ex0">5</div><br>
+                    <div class="text" id="textErrada1">Errada</div>
+                    <div id="barra0"></div>
+                    <div id="barra1"></div>
+                    <div class="text" id="textCerta">Certa</div>
+                    <div id="barra2"></div>
+                    <div id="barra3"></div>
+                    <div class="text" id="textErrada2">Errada</div>
+                    <div id="barra4"></div>
+                    <div id="barra5"></div>
+                    <div class="alternativaEx" id="errada1Ex">18</div>
+                    <div class="alternativaEx" id="certaEx">15</div>
+                    <div class="alternativaEx" id="errada2Ex">25</div><br>
+                </div>
+            </div>
+            <!--<a href="image/imgExemplo3.png"><img src="image/imgExemplo3.png" class="imgExemplo" id="imgExemplo3"></a>-->
+            <p>Se você clicar em alguma das opções incorretas seu jogo vai finalizar, mas para progredir dentro do jogo você deve sempre clicar nas opções corretas, e ao clicar na alternativa certa você vai receber mais um ponto e novas alternativas serão geradas, e novamente apenas uma delas estará correta! Mas dessa vez a alternativa correta vai receber o resultado da soma do ultimo número que você somou com o número da alternativa que você acabou de clicar.</p>
+            <div class="exemplo" id="exemplo4">
+                <div id="container">
+                    <div id="botaoIniciarEx">10</div><br>
+                    <div id="Ex0">5</div><br>
+                    <div class="text" id="somaSinal">+</div>
+                    <div class="alternativaEx" id="errada1Ex">18</div>
+                    <div class="alternativaEx" id="certa1Ex">15</div>
+                    <div class="alternativaEx" id="errada2Ex">25</div><br><hr>
+                    <div class="text" id="textErradas">Errada</div>
+                    <div id="barra0"></div>
+                    <div id="barra1"></div>
+                    <div class="text" id="textCerta">Certa</div>
+                    <div id="barra2"></div>
+                    <div id="barra3"></div>
+                    <div id="containerErradas">
+                        <div class="alternativaEx" id="errada3Ex">26</div>
+                        <div class="alternativaEx" id="errada4Ex">12</div>
+                    </div>
+                    <div id="containerCerta">
+                        <div class="alternativaEx" id="certa2Ex">20</div>
+                    </div><br>
+                </div>
+            </div>
+            
+            <!--<a href="image/imgExemplo4.png"><img src="image/imgExemplo4.png" class="imgExemplo" id="imgExemplo4"></a>-->
+            <p>E continuando nessa premissa, seu jogo vai progredindo e você vai recebendo mais pontos.</p>
+            <div class="exemplo" id="exemplo5">
+                <div id="container">
+                    <div id="botaoIniciarEx">10</div><br>
+                    <div id="Ex0">5</div><br>
+                    <div class="alternativaEx" id="errada1Ex">18</div>
+                    <div class="alternativaEx" id="certa1Ex">15</div>
+                    <div class="alternativaEx" id="errada2Ex">25</div><br><hr>
+                    <div class="alternativaEx" id="errada3Ex">26</div>
+                    <div class="alternativaEx" id="errada4Ex">12</div>
+                    <div class="alternativaEx" id="certa2Ex">20</div><br><hr>
+                    <div class="alternativaEx" id="errada5Ex">27</div>
+                    <div class="alternativaEx" id="errada6Ex">22</div>
+                    <div class="alternativaEx" id="certa3Ex">35</div><br><hr>
+                    <div class="alternativaEx" id="certa4Ex">55</div>
+                    <div class="alternativaEx" id="errada7Ex">40</div>
+                    <div class="alternativaEx" id="errada8Ex">56</div><br><hr>
+                    <div class="alternativaEx" id="Errada9Ex">94</div>
+                    <div class="alternativaEx" id="certa5Ex">90</div>
+                    <div class="alternativaEx" id="errada10Ex">112</div><br><hr>
+                </div>
+            </div>
+            
+            <!-- <a href="image/imgExemplo5.png"><img src="image/imgExemplo5.png" class="imgExemplo" id="imgExemplo5"></a> -->
+            <p>Mas existe um tempo limite para você fazer seus calculos e chegar a uma alternativa. São 12 segundos disponíveis para cada soma, se esse tempo for excedido você também perderá! Para você ficar atento em quanto tempo lhe resta, há uma barra laranja no topo da página, abaixo do cabeçalho, que conforme o tempo passa ela vai reduzindo seu tamanho, e retorna ao tamanho original quando você clica em alguma alternativa correta.</p>
+            <div class="exemplo" id="exemplo6">
+                <header id="cabecalhoEx">
+                    <div id="niveisEx" class="cabecalhoButtonsEx"><div>|||</div></div>
+                    <div id="cronometroEx">00</div>
+                    <div id="restartEx" class="cabecalhoButtonsEx"><div>&#8635;</div></div>
+                    <h1 id="nomeSiteEx"><span>M</span>ath<span>G</span>ame</h1>
+                    <div id="cincosEx"></div>
+                </header>
+            </div>
+
+            <!-- <a href="image/imgExemplo6.png"><img src="image/imgExemplo6.png" class="imgExemplo" id="imgExemplo6"></a> -->
+        </div>
+    </section>
+
+    <script src="javascript/script.js"></script>
+    <script>
+        var cincosEx = 0
+        setInterval(() => {
+            if(cincosEx <= 10) {
+                document.querySelector('#cincosEx').style.background = `repeating-linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0) ${cincosEx*10}%, orangered 1px, orangered 100%)`
+                cincosEx++ 
+            } else {
+                document.querySelector('#cincosEx').style.background = `repeating-linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0) 0%, orangered 1px, orangered 100%)`
+                cincosEx = 0
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathGame</title>
+
+    <link rel="stylesheet" href="css/estilo.css" id="estilo">
+    <link rel="stylesheet" href="css/index.css" id="estiloIndex">
+</head>
+<body>
+    <header id="cabecalhoBackground"></header>
+    <header id="cabecalho">
+        <div id="niveis" class="cabecalhoButtons" onclick="menu()"><div>|||</div></div>
+        <h1 id="nomeSite"><a href="index.html"><span>M</span>ath<span>G</span>ame</a></h1>
+    </header>
+
+    <aside id="menu">
+        <div class="menuItem" id="mudarTema"><div id="temaWhite" class="tema" onclick="mudarTema('white')">White</div><div id="temaDark" class="tema" onclick="mudarTema('dark')">Dark</div></div>
+        <a href="regras.html"><div class="menuItem" id="regrasMenu"><h3>Regras</h3></div></a>
+    </aside>
+
+    <nav id="navbar">Home</nav>
+
+    <section id="corpo">
+        <h1 id="corpoTitulo">Selecione o Modo</h1>
+        <div id="conteudo">
+            <a href="html/game11.html"><div class="selectDificuldade" id="selDifFacil" onclick="select('facil')">
+                <h1>Fácil</h1>
+            </div></a>
+            <a href="html/game21.html"><div class="selectDificuldade" id="selDifMedio" onclick="select('medio')">
+                <h1>Médio</h1>
+            </div></a>
+            <a href="html/game31.html"><div class="selectDificuldade" id="selDifDificil" onclick="select('dificil')">
+                <h1>Difícil</h1>
+            </div></a><br>
+        </div>
+    </section>
+
+    <script src="javascript/script.js"></script>
+    <script src="javascript/index.js"></script>
+</body>
+</html>
